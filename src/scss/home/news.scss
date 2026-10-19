@@ -1,0 +1,34 @@
+.news {
+  .date {
+    gap: 8px;
+    margin-bottom: 16px;
+    .txt {
+      font-size: 14px;
+      color: #8693ab;
+    }
+  }
+}
+.news-card {
+  padding: 0;
+  margin-bottom: 20px;
+  height: auto;
+  .thumb-wrap {
+    display: block;
+    width: 100%;
+    height: 0;
+    padding-bottom: 65%;
+    position: relative;
+    .thumb {
+      position: absolute;
+    }
+  }
+}
+.news-title {
+  font-size: 24px;
+  @media screen and (max-width: 1365px) {
+    font-size: 18px;
+  }
+  @media screen and (max-width: 480px) {
+    margin-bottom: 10px;
+  }
+}

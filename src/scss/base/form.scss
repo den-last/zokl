@@ -1,0 +1,325 @@
+._input,
+input[type="text"],
+input[type="number"],
+input[type="tel"],
+input[type="email"] {
+  display: block;
+  height: 40px;
+  padding: 5px 12px;
+  border-radius: 0;
+  border: 1px solid $lightgray;
+  font-size: 16px;
+  line-height: 1;
+  outline: none;
+  background-color: $white;
+  color: $black;
+  transition: all ease 0.3s;
+  font-weight: 100;
+  letter-spacing: 0.06em;
+  width: 100%;
+
+  @media screen and (max-width: 992px) {
+    font-size: 14px;
+  }
+
+  &:focus {
+    border: 1px solid $blue;
+    transition: all ease 0.3s;
+  }
+
+  &:hover {
+    border: 1px solid $blue;
+    transition: all ease 0.3s;
+  }
+
+  // &:invalid {
+  //   border: 1px solid $red;
+  //   color: $red;
+  //   transition: all ease 0.3s;
+  // }
+
+  &:disabled {
+    // filter: grayscale(1);
+    opacity: 0.6;
+  }
+
+  //   &::placeholder {
+  //     color: $second;
+  //   }
+}
+input[type="radio"] {
+  appearance: none;
+  width: 16px;
+  min-width: 16px;
+  height: 16px;
+  border: 1px solid $lightgray;
+  // background-color: $white;
+  border-radius: 0;
+  position: relative;
+}
+input[type="radio"]:checked {
+  border: 1px solid $black;
+}
+
+input[type="radio"]:checked::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: $black;
+  top: 2px;
+  left: 2px;
+}
+
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  margin: 0;
+  // font: inherit;
+  color: currentColor;
+  width: 16px;
+  min-width: 16px;
+  height: 16px;
+  border: 1px solid $lightgray;
+  border-radius: 0;
+  transform: translateY(-0.075em);
+  display: grid;
+  place-content: center;
+}
+input[type="checkbox"]::before {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 16px;
+  transition: 0.3s opacity ease-in-out;
+  background-image: url(img/icons/check.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 60%;
+  opacity: 0;
+}
+input[type="checkbox"]:checked::before {
+  opacity: 1;
+  transition: 0.3s opacity ease-in-out;
+}
+input[type="submit"] {
+      background: $black;
+  color: $white;
+
+  transition: 0.3s;
+  text-transform: uppercase;
+  border: 1px solid $black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0;
+  width: 320px;
+  padding: 5px 12px;
+  height: 40px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0.1em;
+  @media screen and (max-width: 599px) {
+    width: 100%;
+  }
+  &:hover {
+    background: $white;
+  color: $black;
+  transition: 0.3s;
+}
+}
+
+select {
+  display: block;
+  height: 40px;
+  width: 100%;
+  padding: 5px 35px 5px 12px;
+  border-radius: 0;
+  border: 1px solid $lightgray;
+  font-size: 16px;
+  font-weight: 100;
+  letter-spacing: 0.06em;
+  line-height: 1;
+  outline: none;
+  background-color: #fff;
+  color: $black;
+  transition: all ease 0.3s;
+  background-image: url(img/icons/shevron-down.svg);
+  background-repeat: no-repeat;
+  background-position: calc(100% - 10px) 50% !important;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  @media screen and (max-width: 992px) {
+    font-size: 14px;
+  }
+  &:focus {
+    border: 1px solid $blue;
+    transition: all ease 0.3s;
+  }
+
+  &:hover {
+    border: 1px solid $blue;
+    transition: all ease 0.3s;
+  }
+}
+textarea,
+._textarea {
+  display: block;
+  height: 145px;
+  resize: vertical;
+  padding: 10px 12px;
+  border-radius: 0;
+  border: 1px solid $lightgray;
+  font-size: 16px;
+  line-height: 1.3;
+  outline: none;
+  background-color: $white;
+  color: $black;
+  transition: all ease 0.3s;
+
+  @media screen and (max-width: 992px) {
+    font-size: 14px;
+  }
+
+  &:focus {
+    border: 1px solid $blue;
+    transition: all ease 0.3s;
+  }
+
+  &:hover {
+    border: 1px solid $blue;
+    transition: all ease 0.3s;
+  }
+
+  // &:invalid {
+  //   border: 1px solid $red;
+  //   transition: all ease 0.3s;
+  // }
+
+  &:disabled {
+    opacity: 0.6;
+  }
+}
+// .radio-label {
+//     gap: .5rem;
+//     height: 52px;
+//     padding: 14px 24px;
+//     border-radius: 8px;
+//     border: 1px solid #123456;
+//     font-size: 16px;
+//     line-height: 1.5;
+//     letter-spacing: 0.01em;
+//     outline: none;
+//     color: #123456;
+//     transition: all ease .3s;
+
+//     input {
+//         display: none;
+//     }
+
+//     .checkmark {
+//         display: block;
+//         height: 16px;
+//         width: 16px;
+//         border-radius: 50%;
+//         min-width: 16px;
+//         border: 1px solid #123456;
+//     }
+
+//     .txt {
+//         position: relative;
+//         top: 1px;
+//         font-size: 16px;
+//         font-weight: 600;
+//         margin: 0 !important;
+//         // @include txt;
+//     }
+
+//     &.active {
+//         border: 1px solid #123456;
+//         background: #F2F4FB;
+//         ;
+//     }
+// }
+
+// .radio-label input:checked~.checkmark {
+//     border: 1px solid #123456;
+//     background-color: #123456;
+// }
+
+// ._check-elem {
+//     display: flex;
+//     gap: .5rem;
+
+//     @media screen and (max-width: 599px) {
+//         margin-bottom: 4px;
+//     }
+
+//     .checkmark {
+//         display: block;
+//         height: 24px;
+//         width: 24px;
+//         min-width: 24px;
+//         border: 1px solid #123456;
+//         border-radius: 4px;
+
+//         @media screen and (max-width: 599px) {
+//             height: 16px;
+//             width: 16px;
+//             min-width: 16px;
+//         }
+//     }
+
+//     .txt {
+//         display: block;
+//         // margin-top: 2px;
+//         font-size: 14px;
+//         line-height: 1;
+//         color: $black;
+//         // @include txt;
+
+//         @media screen and (max-width: 992px) {
+//             font-size: 12px;
+//             line-height: 1rem;
+//         }
+
+//         a {
+//             font-size: 16px;
+//             font-weight: 600;
+//             color: #123456;
+//             text-decoration: underline;
+
+//             @media screen and (max-width: 1365px) {
+//                 font-size: 14px;
+//             }
+//         }
+//     }
+// }
+
+// ._check-elem input:checked~.checkmark {
+//     background-color: #123456;
+//     background-position: center;
+//     background-size: 80%;
+//     background-repeat: no-repeat;
+//     background-image: url('../img/icons/checked.svg');
+// }
+
+// ._file {
+//     gap: 12px;
+//     margin-top: auto;
+//     border-color: #123456;
+//     cursor: pointer;
+
+//     input[type="file"] {
+//         display: none;
+//     }
+
+//     .txt {
+//         margin-bottom: 0 !important;
+//         font-weight: 600;
+//         color: #123456 !important;
+//     }
+// }

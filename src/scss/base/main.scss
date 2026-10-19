@@ -1,0 +1,197 @@
+// @font-face {
+//   font-family: 'Cervino';
+//   src: url('fonts/Cervino-RegularNeue.woff2') format('woff2');
+//   font-weight: 400;
+// }
+// @font-face {
+//   font-family: 'Cervino';
+//   src: url('fonts/Cervino-RegularNeue.woff2') format('woff2');
+//   font-weight: 400;
+// }
+// @use "./colors";
+* {
+  box-sizing: border-box;
+  // font-family: "Montserrat", sans-serif;
+  scroll-behavior: smooth;
+}
+// html {
+//   // font-size: 16px;
+// }
+body {
+  margin: 0;
+  padding: 0;
+  max-width: 100vw;
+  position: relative;
+  overflow-x: hidden;
+  color: $black;
+  // font-family: "Manrope", sans-serif;
+  font-family: "Open Sans", sans-serif;
+  // font-optical-sizing: auto;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  //   background-color: $white;
+  word-wrap: break-word;
+  // letter-spacing: 0.06em;
+  // @media screen and (max-width: 992px) {
+  //   font-size: 12px;
+  // }
+  @media screen and (max-width: 992px) {
+    font-size: 14px;
+  }
+}
+
+.container-all {
+  position: relative;
+  overflow: hidden;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  max-width: 1920px;
+  @media screen and (min-width: 1920px) {
+    margin: 0 auto;
+  }
+}
+
+main {
+  position: relative;
+}
+.header-space {
+  height: 230px;
+  // background: rgb(33, 199, 144);
+  @media screen and (max-width: 1365px) {
+      height: 185px;
+    }
+  @media screen and (max-width: 992px) {
+    height: 60px;
+  }
+  // @media screen and (max-width: 480px) {
+  //   height: 96px;
+  // }
+}
+img {
+  display: block;
+  // vertical-align: top;
+}
+
+.window-overlay {
+  position: fixed;
+  width: 100vw;
+  height: 100dvh;
+  left: 0;
+  top: 0;
+  background: #00000080;
+  z-index: 150;
+  opacity: 0;
+  transition: 0.3s;
+  pointer-events: none;
+}
+
+.window-overlay.open {
+  opacity: 1;
+  pointer-events: all;
+  transition: 0.3s;
+}
+.section-head h2 {
+  margin-bottom: 30px;
+  line-height: 1.2;
+  @media screen and (max-width: 992px) {
+    margin-bottom: 25px;
+  }
+}
+.button-wrap {
+  margin-top: 50px;
+  @media screen and (max-width: 992px) {
+    margin-top: 25px;
+  }
+}
+.lang-switch {
+  gap: 15px;
+  .icon {
+    height: 27px;
+    width: auto;
+  }
+  .wmpl-lang-list {
+    gap: 15px;
+    a {
+      color: #00000033;
+      text-transform: uppercase;
+      transition: 0.3s;
+      &:hover {
+        color: $blue;
+        transition: 0.3s;
+      }
+    }
+    & > li.active a {
+      color: #000000;
+    }
+  }
+  &.footer-lang-switch {
+    .icon {
+      filter: brightness(0) invert(1);
+    }
+    .wmpl-lang-list {
+      gap: 15px;
+      a {
+        color: #616a7b;
+        transition: 0.3s;
+        &:hover {
+          color: $blue;
+          transition: 0.3s;
+        }
+      }
+      & > li.active a {
+        color: #ffffff;
+      }
+    }
+  }
+}
+/* Chrome, Edge, Safari */
+// ._has-scrollbar::-webkit-scrollbar-button,
+// ._has-scrollbar::-webkit-scrollbar-button:single-button,
+// ._has-scrollbar::-webkit-scrollbar-button:vertical:start:decrement,
+// ._has-scrollbar::-webkit-scrollbar-button:vertical:end:increment,
+// ._has-scrollbar::-webkit-scrollbar-button:vertical:decrement,
+// ._has-scrollbar::-webkit-scrollbar-button:vertical:increment {
+//     display: none;
+//     width: 0;
+//     height: 0;
+//     background: none;
+// }
+/* Firefox */
+// ._has-scrollbar {
+//     scrollbar-width: thin;
+//     scrollbar-color: #187BCD #F1F5F8;
+// }
+._has-scrollbar::-webkit-scrollbar {
+      @media screen and (min-width: 992px) {
+    width: 9px;
+  }
+}
+._has-scrollbar::-webkit-scrollbar-track {
+          @media screen and (min-width: 992px) {
+    background: #F1F5F8;
+    border-radius: 6px;
+  }
+
+}
+
+._has-scrollbar::-webkit-scrollbar-thumb {
+   @media screen and (min-width: 992px) {
+    background: $blue;
+   border-radius: 6px;
+  }
+}
+
+._has-scrollbar::-webkit-scrollbar-button {
+    @media screen and (min-width: 992px) {
+    display: none;
+  }
+}
+._has-scrollbar::-webkit-scrollbar-button:single-button {
+    @media screen and (min-width: 992px) {
+    display: none;
+    width: 0;
+    height: 0;
+  }
+}

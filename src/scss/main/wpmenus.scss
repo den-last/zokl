@@ -1,0 +1,63 @@
+/* Родительский пункт с подменю */
+.menu-item-has-children {
+    position: relative;
+}
+
+/* Подменю скрыто */
+.menu-item-has-children > .sub-menu {
+    position: absolute;
+   top: calc(100% - 1px);
+    left: 0;
+    padding: 16px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    // display: none;
+    opacity: 0;
+    transition: .3s;
+    pointer-events: none;
+
+    min-width: 170px;
+    margin: 0;
+
+    list-style: none;
+
+    background: #fff;
+    border: 1px solid #D5E3F7;
+    border-radius: 5px;
+    // box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    z-index: 100;
+}
+
+/* Показать подменю при наведении */
+.menu-item-has-children:hover > .sub-menu {
+    // display: block;
+     opacity: 1;
+    transition: .3s;
+    pointer-events: all;
+}
+
+/* Пункты подменю */
+.menu-item-has-children > .sub-menu > li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Ссылки подменю */
+.menu-item-has-children > .sub-menu > li > a {
+    display: block;
+    // padding: 10px 18px;
+
+    color: #222;
+    text-decoration: none;
+    white-space: nowrap;
+    &::after {
+        display: none;
+    }
+}
+
+/* Hover подменю */
+// .menu-item-has-children > .sub-menu > li > a:hover {
+//     background: #f2f2f2;
+// }

@@ -1,0 +1,138 @@
+.inner-page-head {
+  padding-bottom: 25px;
+}
+
+.contacts {
+  .write-us {
+    padding-top: 25px;
+
+    @media screen and (max-width: 992px) {
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .bttn {
+      width: 30%;
+      min-width: 30%;
+
+      @media screen and (max-width: 992px) {
+        width: 50%;
+        min-width: 260px;
+      }
+
+      @media screen and (max-width: 767px) {
+        width: 100%;
+        min-width: auto;
+      }
+    }
+  }
+
+  &-wrap {
+    flex-wrap: wrap;
+    gap: 50px;
+  }
+
+  &-elem {
+    width: 46%;
+    gap: 30px;
+    align-items: flex-start;
+
+    @media screen and (max-width: 767px) {
+      width: 100%;
+      gap: 10px;
+    }
+
+    .icon {
+      width: 60px;
+      min-width: 60px;
+    }
+
+    .txt-col {
+
+      .title {
+        margin-bottom: 16px;
+        font-weight: 700;
+      }
+
+      .desc.link {
+        transition: .3s;
+
+      }
+    }
+
+    &:hover {
+      .desc.link {
+        color: $accent;
+        transition: .3s;
+      }
+
+    }
+  }
+}
+
+.cooperation {
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+}
+
+.cooperation-elem {
+  width: calc((100% - 40px)/3);
+  min-width: calc((100% - 40px)/3);
+  border: 1px solid $gray;
+  background: #FF9F0F1A;
+  padding: 40px 20px 20px;
+
+  @media screen and (max-width: 767px) {
+    width: 100%;
+    min-width: auto;
+    max-width: 380px;
+  }
+
+  .title {
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+}
+
+.howto-wrap {
+  max-width: 776px;
+  margin: 0 auto;
+
+  ol {
+    margin: 0;
+    padding-left: 18px;
+
+    li {
+      margin-bottom: 16px;
+    }
+  }
+
+  .write-us {
+    // padding-top: 15px;
+
+    @media screen and (max-width: 992px) {
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .bttn {
+      width: 48%;
+      min-width: 48%;
+
+      @media screen and (max-width: 992px) {
+        width: 50%;
+        min-width: 260px;
+      }
+
+      @media screen and (max-width: 767px) {
+        width: 100%;
+        min-width: auto;
+      }
+    }
+  }
+}

@@ -1,0 +1,361 @@
+._hide {
+  display: none !important;
+}
+
+._mob {
+  display: none !important;
+
+  @media screen and (max-width: 992px) {
+    display: block !important;
+  }
+}
+
+._mob-f {
+  display: none !important;
+
+  @media screen and (max-width: 992px) {
+    display: flex !important;
+  }
+}
+
+._desk {
+  display: none !important;
+
+  @media screen and (min-width: 993px) {
+    display: block !important;
+  }
+}
+
+._desk-f {
+  display: none !important;
+
+  @media screen and (min-width: 993px) {
+    display: flex !important;
+  }
+}
+
+._flex {
+  display: flex;
+
+  &-x {
+    display: flex;
+    align-items: center;
+  }
+
+  &-cntr {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &-btwn {
+    display: flex;
+    justify-content: space-between;
+
+    &-x {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  &-col {
+    display: flex;
+    flex-direction: column;
+
+    &-cntr {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}
+._wrap-3-1 {
+    flex-wrap: wrap;
+  gap: 20px;
+
+  @media screen and (max-width: 480px) {
+    gap: 16px;
+  }
+  ._card-outer {
+    width: calc((100% - 40px) / 3);
+    @media screen and (max-width: 992px) {
+      width: calc((100% - 20px) / 2);
+    }
+    @media screen and (max-width: 599px) {
+      width: 100%;
+    }
+  } 
+}
+._wrap-4-1 {
+  flex-wrap: wrap;
+  gap: 20px;
+
+  @media screen and (max-width: 480px) {
+    gap: 16px;
+  }
+  ._card-outer {
+    width: calc((100% - 60px) / 4);
+    @media screen and (max-width: 992px) {
+      width: calc((100% - 20px) / 2);
+    }
+    @media screen and (max-width: 480px) {
+      width: 100%;
+    }
+  }
+}
+._wrap-4-2 {
+  flex-wrap: wrap;
+  gap: 20px;
+
+  @media screen and (max-width: 480px) {
+    gap: 8px;
+  }
+  ._card-outer {
+    width: calc((100% - 60px) / 4);
+    @media screen and (max-width: 992px) {
+      width: calc((100% - 20px) / 2);
+    }
+    @media screen and (max-width: 480px) {
+      width: calc((100% - 8px) / 2);
+    }
+  }
+}
+
+._card {
+  // display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border-radius: 20px;
+  padding: 20px;
+  transition: 0.3s;
+  overflow: hidden;
+  @media screen and (max-width: 1365px) {
+    padding: 12px;
+    border-radius: 15px;
+  }
+  @media screen and (max-width: 480px) {
+    padding: 8px;
+  }
+  & * {
+    z-index: 10;
+  }
+  &-grey {
+    background: linear-gradient(228.97deg, #fefefe -15.03%, #e8edf5 60.09%);
+    // transition: 0.3s;
+    // &:hover {
+    //   background: linear-gradient(203.89deg, #45aafd 20.14%, #187bcd 97.56%);
+    //   transition: 0.3s;
+    // }
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: 0;
+      inset: 0;
+      background: linear-gradient(203.89deg, #45aafd 20.14%, #187bcd 97.56%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    &:hover::before {
+      opacity: 1;
+      transition: opacity 0.3s ease;
+    }
+  }
+  &-blue {
+    background: linear-gradient(203.89deg, #45aafd 20.14%, #187bcd 97.56%);
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: 0;
+      inset: 0;
+      background:linear-gradient(0deg, #187bcd, #187bcd);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    &:hover::before {
+      opacity: 1;
+      transition: opacity 0.3s ease;
+    }
+  }
+  .button-arrow {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    @media screen and (max-width: 1365px) {
+      top: 12px;
+      right: 12px;
+    }
+  }
+}
+
+._invert {
+  filter: invert(1);
+}
+
+._accent {
+  color: $blue;
+  font-family: inherit;
+}
+
+._white {
+  color: $white;
+}
+
+// ._d-blue {
+//     color: $darkblue;
+// }
+
+// ._blue {
+//     color: $mediumblue;
+// }
+
+._icon-txt {
+  gap: 12px;
+  position: relative;
+
+  .icon {
+    display: block;
+    height: 20px;
+    width: auto;
+  }
+
+  // ._txt {
+  //     font-size: 14px;
+  //     font-weight: 600;
+  //     line-height: 21px;
+  //     letter-spacing: 0.01em;
+  //     text-align: left;
+  //     color: #ffffff;
+  //     display: block;
+  //     width: max-content;
+  // }
+}
+
+._ta-c {
+  text-align: center;
+}
+
+._tt-u {
+  text-transform: uppercase;
+}
+
+.clamp-3 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  /* <-- количество строк */
+  // line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* на всякий случай */
+  line-height: 1.625;
+  /* важно: фиксировать line-height */
+}
+
+.clamp-2 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  /* <-- количество строк */
+  // line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* на всякий случай */
+  line-height: 1.5;
+  /* важно: фиксировать line-height */
+}
+
+.img-wrap a img {
+  transition: 0.3s;
+}
+
+.img-wrap:hover a img {
+  transform: scale(1.02);
+  transition: 0.3s;
+}
+.img-square-wrap {
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%;
+  position: relative;
+}
+.img-square-wrap img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  object-fit: cover;
+}
+.ul-norm {
+  padding-left: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.o-fit {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+._round {
+  border-radius: 50%;
+  overflow: hidden;
+}
+// .pt120 {
+//     padding-top: 120px;
+
+//     @media screen and (max-width: 992px) {
+//         padding-top: 60px;
+//     }
+// }
+
+// .pb120 {
+//     padding-bottom: 120px;
+
+//     @media screen and (max-width: 992px) {
+//         padding-bottom: 60px;
+//     }
+// }
+
+// .pt72 {
+//     padding-top: 72px;
+
+//     @media screen and (max-width: 992px) {
+//         padding-top: 28px;
+//     }
+// }
+
+.pt60 {
+  padding-top: 60px;
+
+  @media screen and (max-width: 992px) {
+    padding-top: 30px;
+  }
+}
+
+.pb60 {
+  padding-bottom: 60px;
+
+  @media screen and (max-width: 992px) {
+    padding-bottom: 30px;
+  }
+}
+.pt40 {
+  padding-top: 40px;
+
+  @media screen and (max-width: 992px) {
+    padding-top: 30px;
+  }
+}
+.pb40 {
+  padding-bottom: 40px;
+
+  @media screen and (max-width: 992px) {
+    padding-bottom: 30px;
+  }
+}

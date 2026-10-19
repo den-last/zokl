@@ -1,0 +1,53 @@
+.exams-card {
+  min-height: 200px;
+  @media screen and (max-width: 1365px) {
+    min-height: 160px;
+  }
+  @media screen and (max-width: 480px) {
+    min-height: 140px;
+    align-items: center;
+    padding: 26px 8px 12px;
+  }
+  .title {
+    font-weight: 600;
+    // font-size: 20px;
+    color: #222222;
+    margin-top: auto;
+    position: relative;
+    z-index: 10;
+    @media screen and (max-width: 1365px) {
+      font-size: 16px;
+    }
+    @media screen and (max-width: 480px) {
+     text-align: center;
+     font-size: 14px;
+  }
+  }
+  .exams-icon {
+    max-width: 76px;
+    max-height: 76px;
+    position: relative;
+    z-index: 10;
+    @media screen and (max-width: 1365px) {
+      max-width: 48px;
+      max-height: 48px;
+    }
+    @media screen and (max-width: 480px) {
+     max-width: 40px;
+      max-height: 40px;
+  }
+  }
+  &:hover {
+    .title {
+      color: $white;
+    }
+    .exams-icon {
+      filter: brightness(0) invert(1);
+    }
+    .button-arrow {
+      transition: 0.3s;
+      border: 1px solid $white;
+      background-color: #d4e5f14d;
+    }
+  }
+}

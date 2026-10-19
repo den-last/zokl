@@ -1,0 +1,37 @@
+// @import "./scss/scrollCue.scss";
+// @use "/scss/header.scss";
+
+
+
+
+ @import "./scss/base/colors";
+ @import "./scss/base/main";
+@import "./scss/base/lib";
+
+@import "./scss/base/texts";
+@import "./scss/base/container";
+@import "./scss/base/buttons";
+
+// @import "./scss/base/form";
+// @import "./scss/base/sliders";
+
+// @import "./scss/banner.scss";
+// @import "./scss/prodcats.scss";
+// @import "./scss/advs.scss";
+
+// @import "./scss/contact.scss";
+// // @import "./scss/inner-page.scss";
+// // // @import "./scss/mobmenu.scss";
+@import "./scss/main/header.scss";
+@import "./scss/main/foot.scss";
+@import "./scss/main/wpmenus.scss";
+@import "./scss/home/banner";
+@import "./scss/home/exams";
+@import "./scss/home/directions";
+@import "./scss/home/news";
+@import "./scss/home/faq";
+@import "./scss/home/library";
+@import "./scss/home/awards";
+@import "./scss/home/imgtxt";
+@import "./scss/home/counters";
+@import "./scss/home/socials";

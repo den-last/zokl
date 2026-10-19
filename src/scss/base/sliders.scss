@@ -1,0 +1,67 @@
+.swiper.base {
+  padding-bottom: 32px;
+}
+.sw-arr {
+  width: 28px;
+  height: 28px;
+  // position: absolute;
+  background-position: center;
+  background-size: 70%;
+  background-repeat: no-repeat;
+  transition: all ease 0.3s;
+  cursor: pointer;
+  // border-radius: 50%;
+  // border: 3px solid $accent;
+  background-color: #EBEBE9;
+
+  &:hover {
+    // opacity: 1;
+    background-color: #c5c5c5;
+    transition: all ease 0.3s;
+  }
+
+  &.swiper-button-disabled {
+    opacity: 0.4;
+    filter: grayscale(1);
+    &:hover {
+    background-color: #EBEBE9;
+    transition: all ease 0.3s;
+  }
+  }
+
+  &-prev {
+    background-image: url("img/icons/shevron-left.svg");
+  }
+
+  &-next {
+    background-image: url("img/icons/shevron-right.svg");
+  }
+}
+
+.swiper-pagination-bullet {
+  width: 40px;
+  height: 2px;
+  background: #EBEBE9;
+  border-radius: 0;
+  margin: 0 0;
+  opacity: 1;
+
+  // @media screen and (max-width: 767px) {
+  //   width: 8px;
+  //   height: 8px;
+  // }
+}
+
+.swiper-pagination-bullet-active {
+  background: $blue;
+}
+.swiper-buttons {
+  justify-content: flex-end;
+  gap: 22px;
+}
+.swiper-top-prods {
+  margin-top: -46px;
+  @media screen and (max-width: 992px) {
+    margin-top: 28px;
+  }
+}

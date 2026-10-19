@@ -1,0 +1,26 @@
+.counters {
+  &-wrap {
+    max-width: 1654px;
+    margin: 0 auto;
+    gap: 25px;
+    flex-wrap: wrap;
+    @media screen and (max-width: 992px) {
+    justify-content: center;
+  }
+  }
+  .counter-elem {
+    max-width: 250px;
+    .num {
+      font-weight: 700;
+      font-size: 40px;
+      text-align: center;
+      color: $blue;
+      @media screen and (max-width: 1365px) {
+        font-size: 30px;
+      }
+    }
+    .txt {
+      color: $black;
+    }
+  }
+}
