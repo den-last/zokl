@@ -1,5 +1,9 @@
 .main-banner {
   height: calc(100dvh - 230px);
+  @media screen and (max-width: 992px) {
+      height: auto;
+      min-height: 100vw;
+    }
   &__container {
     height: 100%;
   }
@@ -52,14 +56,19 @@
     @media screen and (max-width: 1365px) {
       padding: 20px;
     }
-    @media screen and (max-width: 480px) {
-      padding: 52vw 15px 20px;
+    @media screen and (max-width: 992px) {
+      display: grid;
+      grid-gap: 20px;
+      grid-template-columns: 47% 53%;
     }
     &-inner {
       width: 47%;
       background: #e4aaaa23;
       justify-content: center;
       align-items: flex-start;
+      @media screen and (max-width: 992px) {
+      width: 100%;
+    }
     }
     .subtitle {
       padding: 7px 15px;
@@ -117,6 +126,9 @@
     flex-grow: 1;
     background: #aae4c223;
     position: relative;
+    @media screen and (max-width: 992px) {
+      grid-area: 1/2/3/3;
+    }
   }
   .float-elem {
     padding: 12px;
@@ -147,6 +159,10 @@
       position: absolute;
       left: 0;
       bottom: 3dvh;
+      @media screen and (max-width: 992px) {
+      left: 30px;
+    }
+
     }
     &2 {
       position: absolute;
@@ -166,7 +182,9 @@
     @media screen and (max-width: 1799px) {
       width: 20vw;
     }
-
+@media screen and (max-width: 992px) {
+      width: 100%;
+    }
     &-card {
       height: auto;
       padding: 25px 35px;
