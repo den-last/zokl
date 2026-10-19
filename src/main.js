@@ -61,10 +61,10 @@ const swiperSoc = new Swiper(".swiperSoc", {
 const mainBannerSwiper = new Swiper(".mainBannerSwiper", {
   spaceBetween: 30,
   effect: "fade",
-  autoplay: {
-    delay: 4000,
-    disableOnInteraction: false,
-  },
+  // autoplay: {
+  //   delay: 4000,
+  //   disableOnInteraction: false,
+  // },
 
   pagination: {
     el: ".mainBannerPagination",
