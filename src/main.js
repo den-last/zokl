@@ -11,6 +11,10 @@ $(document).ready(function () {
     $(this).closest(".faq-elem-head").next(".faq-elem-body").slideToggle();
     $(this).parents(".faq-elem").toggleClass("active");
   });
+  $('#menuStart').on("click", function () {
+    $(this).children(".icon").toggle();
+    $('.mobile-menu').toggleClass('open')
+  });
 });
 document.addEventListener("scroll", function () {
   if (window.scrollY >= 100) {
