@@ -23,7 +23,7 @@
       transform: translate(-50%, -50%);
     }
   }
-  .title {
+  .directions-title {
     position: relative;
     margin-top: auto;
     font-weight: 600;
@@ -41,7 +41,7 @@
     }
   }
   &:hover {
-    .title {
+    .directions-title {
       color: $white;
     }
     .button-arrow {

@@ -1,80 +1,127 @@
 // import './style.css'
-import "./style.scss";
-import heroImg from "./assets/hero.png";
-import javascriptLogo from "./assets/javascript.svg";
-import viteLogo from "./assets/vite.svg";
-import { setupCounter } from "./counter.js";
+import './style.scss'
+import heroImg from './assets/hero.png'
+import javascriptLogo from './assets/javascript.svg'
+import viteLogo from './assets/vite.svg'
+import { setupCounter } from './counter.js'
 
-console.log("hello world 2");
+console.log('hello world 2')
 $(document).ready(function () {
-  $(".faq-elem-head").on("click", function () {
-    $(this).closest(".faq-elem-head").next(".faq-elem-body").slideToggle();
-    $(this).parents(".faq-elem").toggleClass("active");
-  });
-  $('#menuStart').on("click", function () {
-    $(this).children(".icon").toggle();
+  $('.faq-elem-head').on('click', function () {
+    $(this).closest('.faq-elem-head').next('.faq-elem-body').slideToggle()
+    $(this).parents('.faq-elem').toggleClass('active')
+  })
+  $('#menuStart').on('click', function () {
+    $(this).children('.icon').toggle()
     $('.mobile-menu').toggleClass('open')
-  });
-});
-document.addEventListener("scroll", function () {
-  if (window.scrollY >= 100) {
-    document.querySelectorAll(".header").forEach(function (el) {
-      el.classList.add("header-fixed");
-    });
-  } else {
-    document.querySelectorAll(".header").forEach(function (el) {
-      el.classList.remove("header-fixed");
-    });
-  }
-});
-function setSidebarHeight() {
-  const video = document.getElementById("video2");
-  const sidebar = document.getElementById("sidebarWrap");
+  })
+  $('.mob-menu > li > .menu-item-row > .icon-wrap').on('click', function () {
+    $(this).closest('li').toggleClass('active')
+    $(this).closest('.menu-item-row').next('ul.sub-menu').slideToggle()
+  })
+  $('.subMenuToggle').on('click', function () {
+    $(this).closest('li').toggleClass('active')
+    $(this).closest('.menu-item-row').next('ul.sub-menu').slideToggle()
+  })
+  // $('[data-open]').on('click', function (e) {
+  //   e.preventDefault()
+  //   $('.header-bottom-wrap a').removeClass('active')
+  //   $(this).addClass('active')
+  //   const id = $(this).attr('data-open')
 
-  if (!video || !sidebar) return;
+  //   $('.mega-menu').addClass('open')
+
+  //   $('[data-sub-menu]').hide()
+  //   $('[data-sub-menu="' + id + '"]').show()
+  // })
+  $('.header-bottom li a').on('click', function (e) {
+    e.preventDefault()
+    $('.header-bottom-wrap a').removeClass('active')
+    $(this).addClass('active')
+    const id = $(this).closest('li').attr('id').replace('menu-item-', '');
+
+    $('.mega-menu').addClass('open')
+
+    $('[data-sub-menu]').hide()
+    $('[data-sub-menu="' + id + '"]').show()
+  })
+
+  $('[data-open2]').on('click', function () {
+    const id = $(this).attr('data-open2')
+    $('.mega-menu-sidebar > .sub-menu > li.menu-item').removeClass('active')
+    $(this).parents('li.menu-item').addClass('active')
+    $('[data-sub-menu2]').hide()
+    $('[data-sub-menu2="' + id + '"]').show()
+
+    const src = $(this).attr('data-img')
+    $('.directionImage').attr('src', src);
+  })
+
+  $('#megaMenuClose').on('click', function () {
+    $('.header-bottom-wrap a').removeClass('active')
+    $('.mega-menu').removeClass('open')
+  })
+  
+})
+document.addEventListener('scroll', function () {
+  if (window.scrollY >= 100) {
+    document.querySelectorAll('.header').forEach(function (el) {
+      el.classList.add('header-fixed')
+    })
+  } else {
+    document.querySelectorAll('.header').forEach(function (el) {
+      el.classList.remove('header-fixed')
+    })
+  }
+})
+function setSidebarHeight () {
+  const video = document.getElementById('video2')
+  const sidebar = document.getElementById('sidebarWrap')
+
+  if (!video || !sidebar) return
 
   if (window.innerWidth >= 993) {
-    sidebar.style.height = `${video.offsetHeight}px`;
+    sidebar.style.height = `${video.offsetHeight}px`
   } else {
-    sidebar.style.height = "";
+    sidebar.style.height = ''
   }
 }
 
-window.addEventListener("load", setSidebarHeight);
-window.addEventListener("resize", setSidebarHeight);
+window.addEventListener('load', setSidebarHeight)
+window.addEventListener('resize', setSidebarHeight)
 
-const swiperSoc = new Swiper(".swiperSoc", {
+const swiperSoc = new Swiper('.swiperSoc', {
   slidesPerView: 3,
   spaceBetween: 20,
 
   breakpoints: {
     0: {
       slidesPerView: 1.3,
-      spaceBetween: 10,
+      spaceBetween: 10
     },
     481: {
       slidesPerView: 2,
-      spaceBetween: 15,
+      spaceBetween: 15
     },
     1366: {
       slidesPerView: 3,
-      spaceBetween: 20,
-    },
-  },
-});
-const mainBannerSwiper = new Swiper(".mainBannerSwiper", {
+      spaceBetween: 20
+    }
+  }
+})
+const mainBannerSwiper = new Swiper('.mainBannerSwiper', {
   spaceBetween: 30,
-  effect: "fade",
+  effect: 'fade',
   // autoplay: {
   //   delay: 4000,
   //   disableOnInteraction: false,
   // },
 
   pagination: {
-    el: ".mainBannerPagination",
-    clickable: true,
-  },
-});
+    el: '.mainBannerPagination',
+    clickable: true
+  }
+})
 // const video = document.getElementById('video');
 
 //                   video.addEventListener('click', () => {

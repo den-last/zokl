@@ -419,6 +419,7 @@
         opacity: 0;
         transition: 0.3s;
         width: max-content;
+        pointer-events: none;
       }
     }
     &:hover {
@@ -426,6 +427,7 @@
         @media screen and (max-width: 1540px) {
           transition: 0.3s;
           opacity: 1;
+          pointer-events: all;
         }
       }
     }

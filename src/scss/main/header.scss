@@ -238,7 +238,8 @@
       transition: 0.3s;
       font-weight: 500;
       font-size: 18px;
-      padding: 0 2.8vw;
+      padding: 0 1.4vw;
+      border-radius: 35px;
       @media screen and (max-width: 1365px) {
         font-size: 14px;
         padding: 0 1.5vw;
@@ -247,7 +248,10 @@
         // font-size: 15px;
       }
       &:hover {
-        background-color: #0b63ac;
+        background-color: #2891E8;
+      }
+      &.active {
+        background-color: #2891E8;
       }
       // &::before {
       // 	content: '';

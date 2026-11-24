@@ -508,8 +508,7 @@
     .map {
       margin-left: auto;
       border-left: 1px solid rgba(255, 255, 255, 0.66);
-      background: #FFFFFF99;
-
+      background: #ffffff99;
     }
   }
 }
@@ -522,18 +521,95 @@
     color: $blue;
   }
 }
-// .small-banner {
-//   width: 100%;
+.small-banner {
+  width: 100%;
 
-//   &__container {
-//     height: 100%;
-//   }
-//   .banner-elem {
-//     border-radius: 20px;
-//     height: 565px;
-//   }
-//   // min-height: 435px;
-//   @media screen and (max-width: 992px) {
-//     height: auto;
-//   }
-// }
+  &__container {
+    height: 100%;
+  }
+  .banner-elem {
+    border-radius: 20px;
+    .img-wrap {
+      img {
+        z-index: 0;
+      }
+      &::before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: #15162185;
+        z-index: 5;
+      }
+    }
+
+    .txt-wrap {
+      padding: 30px 7.8vw;
+      min-height: 565px;
+      justify-content: center;
+      @media screen and (max-width: 1365px) {
+        min-height: auto;
+        height: auto;
+        padding: 30px 5vw;
+      }
+      @media screen and (max-width: 992px) {
+        display: flex;
+        gap: 12px;
+      }
+      @media screen and (max-width: 480px) {
+          padding: 52vw 15px 15px;
+        }
+      .subtitle {
+        font-weight: 600;
+        font-size: 24px;
+        color: $white;
+        background: transparent;
+        padding: 0;
+        @media screen and (max-width: 1365px) {
+          font-size: 20px;
+        }
+        @media screen and (max-width: 992px) {
+          font-size: 18px;
+        }
+        @media screen and (max-width: 480px) {
+          margin: 0;
+        }
+      }
+      .title {
+        font-weight: 600;
+        font-size: 48px;
+        color: $white;
+        @media screen and (max-width: 1365px) {
+          font-size: 36px;
+        }
+        @media screen and (max-width: 992px) {
+          font-size: 30px;
+        }
+        @media screen and (max-width: 767px) {
+          text-align: left;
+        }
+        @media screen and (max-width: 480px) {
+          margin: 0;
+        }
+      }
+      .button-wrap {
+        @media screen and (max-width: 992px) {
+          margin-top: 24px;
+        }
+      }
+    }
+    .button {
+      transition: 0.3s;
+      @media screen and (max-width: 480px) {
+          min-width: auto;
+        }
+      &:hover {
+        transition: 0.3s;
+        border: 1px solid $orange;
+      }
+    }
+  }
+}

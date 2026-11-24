@@ -60,8 +60,8 @@ main {
   height: 230px;
   // background: rgb(33, 199, 144);
   @media screen and (max-width: 1365px) {
-      height: 185px;
-    }
+    height: 185px;
+  }
   @media screen and (max-width: 992px) {
     height: 60px;
   }
@@ -92,13 +92,19 @@ img {
   pointer-events: all;
   transition: 0.3s;
 }
-.section-head h2 {
+.section-head {
   margin-bottom: 30px;
-  line-height: 1.2;
   @media screen and (max-width: 992px) {
     margin-bottom: 25px;
   }
+  h2 {
+    line-height: 1.2;
+  }
+  p {
+    margin-top: 10px;
+  }
 }
+
 .button-wrap {
   margin-top: 50px;
   @media screen and (max-width: 992px) {
@@ -164,32 +170,31 @@ img {
 //     scrollbar-color: #187BCD #F1F5F8;
 // }
 ._has-scrollbar::-webkit-scrollbar {
-      @media screen and (min-width: 992px) {
+  @media screen and (min-width: 992px) {
     width: 9px;
   }
 }
 ._has-scrollbar::-webkit-scrollbar-track {
-          @media screen and (min-width: 992px) {
-    background: #F1F5F8;
+  @media screen and (min-width: 992px) {
+    background: #f1f5f8;
     border-radius: 6px;
   }
-
 }
 
 ._has-scrollbar::-webkit-scrollbar-thumb {
-   @media screen and (min-width: 992px) {
+  @media screen and (min-width: 992px) {
     background: $blue;
-   border-radius: 6px;
+    border-radius: 6px;
   }
 }
 
 ._has-scrollbar::-webkit-scrollbar-button {
-    @media screen and (min-width: 992px) {
+  @media screen and (min-width: 992px) {
     display: none;
   }
 }
 ._has-scrollbar::-webkit-scrollbar-button:single-button {
-    @media screen and (min-width: 992px) {
+  @media screen and (min-width: 992px) {
     display: none;
     width: 0;
     height: 0;

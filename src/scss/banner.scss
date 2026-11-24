@@ -145,6 +145,14 @@
   @media screen and (max-width: 992px) {
     height: auto;
   }
+  .subtitle {
+    font-weight: 600;
+    font-size: 24px;
+    color: $white;
+    background: transparent;
+    padding: 0;
+  }
+  
 }
 
 .main-banner {
