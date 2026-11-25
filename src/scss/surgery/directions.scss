@@ -1,0 +1,55 @@
+.surg-directions-card {
+  min-height: 165px;
+  display: block;
+  @media screen and (max-width: 599px) {
+    min-height: auto;
+  }
+  @media screen and (max-width: 480px) {
+    padding: 16px;
+  }
+  .img-txt-row {
+    // align-items: flex-start;
+    // background: #0000002d;
+    gap: 26px;
+    height: 100%;
+    @media screen and (max-width: 480px) {
+      flex-direction: column;
+      gap: 12px;
+    }
+  }
+  .icon {
+    transition: 0.3s;
+    max-width: 52px;
+    max-height: 52px;
+  }
+  .title {
+    font-weight: 600;
+    margin-bottom: 8px;
+    transition: 0.3s;
+  }
+  .txt {
+    margin-bottom: 4px;
+    transition: 0.3s;
+  }
+  .link {
+    color: $blue;
+    margin-top: auto;
+  }
+  &:hover {
+    .icon {
+      transition: 0.3s;
+      filter: brightness(0) invert(1);
+    }
+    .title {
+      color: #fff;
+      transition: 0.3s;
+    }
+    .txt {
+      color: #fff;
+      transition: 0.3s;
+    }
+    .link {
+      color: #fff;
+    }
+  }
+}

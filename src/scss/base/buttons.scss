@@ -269,21 +269,23 @@
   //   width: auto;
   // }
 
-  &.inline {
+  &-inline {
     transition: 0.3s;
     padding: 0;
-    gap: 10px;
+    gap: 6px;
+    display: flex;
+    align-items: center;
     // color: $accent;
-    text-decoration: underline;
+    // text-decoration: underline;
 
     &:hover {
       transition: 0.3s;
-      background-color: #ff9f0f24;
+      // background-color: #ff9f0f24;
       // color: $accent;
-      box-shadow: 0px 4px 4px 0px #00000040;
+      // box-shadow: 0px 4px 4px 0px #00000040;
 
       .txt {
-        color: #d38510;
+        color: $blue;
         transition: 0.3s;
       }
     }
