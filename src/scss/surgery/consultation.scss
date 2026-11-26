@@ -1,0 +1,75 @@
+.consultation {
+  &-wrap {
+    @media screen and (max-width: 992px) {
+      flex-direction: column;
+      //   gap: 16px;
+    }
+    .txt-col {
+      width: 50%;
+      min-width: 50%;
+      padding-right: 0.48vw;
+      @media screen and (max-width: 992px) {
+        width: 100%;
+        min-width: auto;
+      }
+      .contact-elem .icon-wrap {
+        width: 44px;
+        min-width: 44px;
+        height: 44px;
+        background: #e2e2e2;
+      }
+      .icon {
+        width: 22px;
+        min-width: 22px;
+        height: auto;
+      }
+      .txt-wrap {
+        // padding-top: 12px;
+      }
+      .link {
+        color: $blue;
+        text-decoration: underline;
+        font-size: 24px;
+      }
+    }
+    .cards-col {
+      width: 50%;
+      min-width: 50%;
+      padding-left: 10px;
+      @media screen and (max-width: 992px) {
+        width: 100%;
+        min-width: auto;
+        padding-left: 0;
+      }
+    }
+  }
+  &-card {
+    padding: 24px;
+    @media screen and (max-width: 992px) {
+      padding: 16px;
+    }
+    .icon {
+      width: 66px;
+      height: auto;
+      margin-bottom: 15px;
+    }
+    .title {
+      margin-bottom: 4px;
+      font-weight: 600;
+    }
+    &:hover {
+      .icon {
+        transition: 0.3s;
+        filter: brightness(0) invert(1);
+      }
+      .title {
+        transition: 0.3s;
+        color: #fff;
+      }
+      p {
+        transition: 0.3s;
+        color: #fff;
+      }
+    }
+  }
+}
