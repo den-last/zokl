@@ -2,7 +2,7 @@
   &-wrap {
     @media screen and (max-width: 992px) {
       flex-direction: column;
-      //   gap: 16px;
+      gap: 48px;
     }
     .txt-col {
       width: 50%;
@@ -12,24 +12,72 @@
         width: 100%;
         min-width: auto;
       }
+      .contacts-block {
+        gap: 25px;
+        @media screen and (max-width: 992px) {
+          gap: 16px;
+        }
+      }
+      .contact-row {
+        gap: 50px;
+        @media screen and (max-width: 1199px) {
+          gap: 24px;
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        @media screen and (max-width: 992px) {
+          gap: 16px;
+        }
+      }
       .contact-elem .icon-wrap {
         width: 44px;
         min-width: 44px;
         height: 44px;
         background: #e2e2e2;
+        @media screen and (max-width: 992px) {
+          width: 32px;
+          min-width: 32px;
+          height: 32px;
+        }
       }
       .icon {
         width: 22px;
         min-width: 22px;
         height: auto;
+        @media screen and (max-width: 992px) {
+          width: 16px;
+          min-width: 16px;
+          height: auto;
+        }
       }
-      .txt-wrap {
-        // padding-top: 12px;
+      // .txt-wrap {
+      //   // padding-top: 12px;
+      // }
+      .tel {
+        padding-top: 7px;
+        @media screen and (max-width: 992px) {
+          padding-top: 3px;
+        }
+      }
+      .address {
+        padding-top: 10px;
+        @media screen and (max-width: 992px) {
+          padding-top: 6px;
+        }
       }
       .link {
         color: $blue;
         text-decoration: underline;
         font-size: 24px;
+        padding-top: 3px;
+        transition: 0.3s;
+        @media screen and (max-width: 992px) {
+          font-size: 16px;
+        }
+        &:hover {
+          transition: 0.3s;
+          color: $orange;
+        }
       }
     }
     .cards-col {
@@ -44,31 +92,22 @@
     }
   }
   &-card {
-    padding: 24px;
+    padding: 57px 57px 65px;
+    max-width: 750px;
+    margin-left: auto;
+    @media screen and (max-width: 1199px) {
+      padding: 40px 25px;
+    }
     @media screen and (max-width: 992px) {
       padding: 16px;
-    }
-    .icon {
-      width: 66px;
-      height: auto;
-      margin-bottom: 15px;
+      max-width: none;
     }
     .title {
-      margin-bottom: 4px;
-      font-weight: 600;
-    }
-    &:hover {
-      .icon {
-        transition: 0.3s;
-        filter: brightness(0) invert(1);
-      }
-      .title {
-        transition: 0.3s;
-        color: #fff;
-      }
-      p {
-        transition: 0.3s;
-        color: #fff;
+      margin-bottom: 42px;
+      font-weight: 400;
+      @media screen and (max-width: 992px) {
+        margin-bottom: 20px;
+        font-size: 18px;
       }
     }
   }
