@@ -4,7 +4,6 @@
     //   flex-direction: column;
     // }
     ._card-outer {
-     
       @media screen and (max-width: 767px) {
         width: 100%;
       }
@@ -14,6 +13,9 @@
     border-radius: 20px;
     overflow: hidden;
     aspect-ratio: 20/13;
+    @media screen and (max-width: 992px) {
+      border-radius: 8px;
+    }
   }
   &-txt {
     justify-content: flex-end;
@@ -22,8 +24,7 @@
       max-width: 750px;
       min-height: 460px;
       @media screen and (max-width: 767px) {
-        min-height: 460px;
-        // continue.....
+        min-height: 300px;
       }
       .num {
         background: #e8edf5;
@@ -66,6 +67,7 @@
         }
         @media screen and (max-width: 480px) {
           font-size: 16px;
+          margin-bottom: 20px;
         }
       }
       .titles-nav {
@@ -74,9 +76,7 @@
         @media screen and (max-width: 992px) {
           font-size: 14px;
         }
-    //     @media screen and (max-width: 767px) {
-    //     margin-top: auto;
-    //   }
+
         @media screen and (max-width: 480px) {
           font-size: 12px;
         }
@@ -89,19 +89,37 @@
   }
   &-navigation {
     gap: 46px;
+    @media screen and (max-width: 480px) {
+      width: 100%;
+      justify-content: space-between;
+    }
     .nums {
       font-size: 30px;
+      @media screen and (max-width: 480px) {
+        font-size: 14px;
+      }
       .current-slide {
         font-weight: 600;
         font-size: 32px;
+        @media screen and (max-width: 480px) {
+          font-size: 14px;
+        }
       }
     }
   }
   &-arrow {
+    @media screen and (max-width: 480px) {
+      width: 44px;
+      min-width: 44px;
+      height: 44px;
+    }
     .icon {
       width: 24px;
       height: auto;
       filter: brightness(0) invert(1);
+      @media screen and (max-width: 480px) {
+        width: 18px;
+      }
     }
     &:hover {
       border: 1px solid $orange;
